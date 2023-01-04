@@ -6,7 +6,7 @@ export default function feedbackPage(props) {
   const [feedbackDetail, setFeedbackDetail] = useState()
 
   function loadFeedbackDetail(id) {
-    fetch(`/api/${id}`)
+    fetch(`/api/feedback/${id}`)
       .then((response) => response.json())
       .then((data) => {
         setFeedbackDetail(data.feedback)
